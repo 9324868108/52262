@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Freelancers - Xwork</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/browse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-text">Xwork</span>
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <a href="index.html#features" class="nav-link">Features</a>
+                        <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                        <a href="browse-freelancers.html" class="nav-link">Freelancers</a>
+                        <a href="browse-projects.html" class="nav-link">Projects</a>
+                        <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                        <a href="login.html" class="nav-link">Login</a>
+                        <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+                    </nav>
+                    <button class="mobile-menu-btn" aria-label="Open menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-container">
+                <div class="mobile-menu-header">
+                    <button class="mobile-menu-close" aria-label="Close menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="index.html#features" class="mobile-nav-link">Features</a>
+                    <a href="index.html#how-it-works" class="mobile-nav-link">How It Works</a>
+                    <a href="browse-freelancers.html" class="mobile-nav-link">Freelancers</a>
+                    <a href="browse-projects.html" class="mobile-nav-link">Projects</a>
+                    <a href="index.html#testimonials" class="mobile-nav-link">Testimonials</a>
+                    <a href="login.html" class="mobile-nav-link">Login</a>
+                    <a href="signup.html" class="btn btn-primary mobile-btn">Sign Up Free</a>
+                </nav>
+            </div>
+        </div>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="browse-hero-section">
+                <div class="container">
+                    <div class="browse-hero-content">
+                        <h1 class="browse-hero-title">Find the Perfect Freelancer</h1>
+                        <p class="browse-hero-description">
+                            Browse our talented pool of freelancers to find the perfect match for your project needs.
+                        </p>
+                        <div class="search-container">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="search-input" placeholder="Search for skills, services, or freelancers...">
+                            <button class="btn btn-primary search-btn">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Browse Section -->
+            <section class="browse-section">
+                <div class="container">
+                    <div class="browse-grid">
+                        <!-- Filters Sidebar -->
+                        <div class="filters-sidebar">
+                            <div class="filters-header">
+                                <h2 class="filters-title">Filters</h2>
+                                <button class="btn btn-outline btn-sm">Clear All</button>
+                            </div>
+
+                            <div class="filter-group">
+                                <h3 class="filter-group-title">Category</h3>
+                                <div class="filter-options">
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="category" value="web-dev">
+                                        <span>Web Development</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="category" value="mobile-dev">
+                                        <span>Mobile Development</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="category" value="design">
+                                        <span>Design & Creative</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="category" value="writing">
+                                        <span>Writing & Translation</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="category" value="marketing">
+                                        <span>Digital Marketing</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="category" value="video">
+                                        <span>Video & Animation</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="category" value="audio">
+                                        <span>Music & Audio</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="category" value="data">
+                                        <span>Data Science</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="filter-group">
+                                <h3 class="filter-group-title">Hourly Rate</h3>
+                                <div class="filter-options">
+                                    <div class="range-slider">
+                                        <div class="range-slider-track"></div>
+                                        <div class="range-slider-handle" data-handle="min"></div>
+                                        <div class="range-slider-handle" data-handle="max"></div>
+                                    </div>
+                                    <div class="range-inputs">
+                                        <div class="range-input">
+                                            <span>$</span>
+                                            <input type="number" id="min-price" value="10" min="5" max="200">
+                                        </div>
+                                        <span>to</span>
+                                        <div class="range-input">
+                                            <span>$</span>
+                                            <input type="number" id="max-price" value="100" min="5" max="200">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter-group">
+                                <h3 class="filter-group-title">Skills</h3>
+                                <div class="filter-options">
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="skills" value="react">
+                                        <span>React</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="skills" value="node">
+                                        <span>Node.js</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="skills" value="python">
+                                        <span>Python</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="skills" value="figma">
+                                        <span>Figma</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="skills" value="photoshop">
+                                        <span>Photoshop</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="skills" value="seo">
+                                        <span>SEO</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="skills" value="content">
+                                        <span>Content Writing</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="skills" value="video-editing">
+                                        <span>Video Editing</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="filter-group">
+                                <h3 class="filter-group-title">Rating</h3>
+                                <div class="filter-options">
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="rating" value="4">
+                                        <span class="rating-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>& Up</span>
+                                        </span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="rating" value="3">
+                                        <span class="rating-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>& Up</span>
+                                        </span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="rating" value="2">
+                                        <span class="rating-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>& Up</span>
+                                        </span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" name="rating" value="1">
+                                        <span class="rating-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>& Up</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block">Apply Filters</button>
+                        </div>
+
+                        <!-- Results -->
+                        <div class="browse-results">
+                            <div class="results-header">
+                                <h2 class="results-title"><span class="results-count">8</span> Freelancers Available</h2>
+                                <div class="results-sort">
+                                    <span>Sort by:</span>
+                                    <select class="sort-select">
+                                        <option>Relevance</option>
+                                        <option>Rating: High to Low</option>
+                                        <option>Hourly Rate: Low to High</option>
+                                        <option>Hourly Rate: High to Low</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="results-grid">
+                                <!-- Freelancer Cards -->
+                                <div class="browse-card">
+                                    <div class="browse-card-content">
+                                        <div class="browse-card-left">
+                                            <img src="https://placehold.co/100x100" alt="Sarah Johnson" class="browse-card-avatar">
+                                            <div class="browse-card-info">
+                                                <div class="browse-card-header">
+                                                    <h3 class="browse-card-name">Sarah Johnson</h3>
+                                                    <p class="browse-card-title">UI/UX Designer</p>
+                                                </div>
+                                                <div class="browse-card-rating">
+                                                    <div class="stars">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </div>
+                                                    <span class="rating-text">4.9 (56 reviews)</span>
+                                                </div>
+                                                <p class="browse-card-description">
+                                                    Experienced UI/UX designer with a passion for creating beautiful, functional interfaces that users love.
+                                                </p>
+                                                <div class="browse-card-skills">
+                                                    <span class="skill-tag">UI Design</span>
+                                                    <span class="skill-tag">UX Research</span>
+                                                    <span class="skill-tag">Figma</span>
+                                                    <span class="skill-tag">+1</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="browse-card-right">
+                                            <p class="browse-card-rate">$45/hr</p>
+                                            <a href="freelancers/1.html" class="btn btn-primary btn-sm">View Profile</a>
+                                            <button class="btn btn-icon">
+                                                <i class="far fa-heart"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- More freelancer cards... -->
+                                <!-- Copy the browse-card structure above and repeat for more freelancers -->
+
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="pagination">
+                                <button class="pagination-btn pagination-prev" disabled>
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="pagination-btn pagination-active">1</button>
+                                <button class="pagination-btn">2</button>
+                                <button class="pagination-btn">3</button>
+                                <button class="pagination-btn">4</button>
+                                <button class="pagination-btn">5</button>
+                                <button class="pagination-btn pagination-next">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-col-large">
+                        <div class="footer-logo">
+                            <span class="logo-text">Xwork</span>
+                        </div>
+                        <p class="footer-description">
+                            A New Era of Freelancing Starts Here. Join the world's most user-friendly, secure, and fair freelance platform with zero commission for 6 months.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="footer-title">Platform</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html#how-it-works">How it Works</a></li>
+                            <li><a href="browse-freelancers.html">Browse Freelancers</a></li>
+                            <li><a href="browse-projects.html">Browse Projects</a></li>
+                            <li><a href="index.html#pricing">Pricing</a></li>
+                            <li><a href="enterprise.html">Enterprise</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="footer-title">Resources</h3>
+                        <ul class="footer-links">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="guides.html">Guides</a></li>
+                            <li><a href="help-center.html">Help Center</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="community.html">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="footer-title">Company</h3>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="newsletter">
+                        <p class="newsletter-text">Subscribe to our newsletter</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" class="newsletter-input">
+                            <button class="newsletter-button"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <p class="copyright">© <span id="current-year"></span> Xwork. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/browse.js"></script>
+</body>
+</html>
